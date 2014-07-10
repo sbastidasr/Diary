@@ -22,6 +22,7 @@
 		EA490C72196EE1A70019F403 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA490C56196EE1A70019F403 /* CoreData.framework */; };
 		EA490C7A196EE1A70019F403 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA490C78196EE1A70019F403 /* InfoPlist.strings */; };
 		EA490C7C196EE1A70019F403 /* DiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA490C7B196EE1A70019F403 /* DiaryTests.m */; };
+		EA490C87196EF6710019F403 /* AQCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = EA490C86196EF6710019F403 /* AQCoreDataStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		EA490C77196EE1A70019F403 /* DiaryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DiaryTests-Info.plist"; sourceTree = "<group>"; };
 		EA490C79196EE1A70019F403 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA490C7B196EE1A70019F403 /* DiaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiaryTests.m; sourceTree = "<group>"; };
+		EA490C85196EF6710019F403 /* AQCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQCoreDataStack.h; sourceTree = "<group>"; };
+		EA490C86196EF6710019F403 /* AQCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQCoreDataStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 			children = (
 				EA490C61196EE1A70019F403 /* AQAppDelegate.h */,
 				EA490C62196EE1A70019F403 /* AQAppDelegate.m */,
+				EA490C85196EF6710019F403 /* AQCoreDataStack.h */,
+				EA490C86196EF6710019F403 /* AQCoreDataStack.m */,
 				EA490C67196EE1A70019F403 /* Images.xcassets */,
 				EA490C64196EE1A70019F403 /* Diary.xcdatamodeld */,
 				EA490C59196EE1A70019F403 /* Supporting Files */,
@@ -252,6 +257,7 @@
 				EA490C66196EE1A70019F403 /* Diary.xcdatamodeld in Sources */,
 				EA490C63196EE1A70019F403 /* AQAppDelegate.m in Sources */,
 				EA490C5F196EE1A70019F403 /* main.m in Sources */,
+				EA490C87196EF6710019F403 /* AQCoreDataStack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
