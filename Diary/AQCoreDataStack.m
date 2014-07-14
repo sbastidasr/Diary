@@ -14,6 +14,16 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
++(instancetype) defaultStack
+{
+    static AQCoreDataStack *defaultStack;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        defaultStack = [[self alloc]init];
+    });
+    return defaultStack;
+}
+
 - (void)saveContext
 {
     NSError *error = nil;
