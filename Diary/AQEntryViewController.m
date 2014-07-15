@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 Adtq. All rights reserved.
 //
 
-#import "AQNewEntryViewController.h"
+#import "AQEntryViewController.h"
 #import "THDiaryEntry.h"
 #import "AQCoreDataStack.h"
 
-@interface AQNewEntryViewController ()
+@interface AQEntryViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
-@implementation AQNewEntryViewController
+@implementation AQEntryViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    if (self.entry!=nil){
+        self.textField.text =self.entry.body;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,15 +39,34 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 - (IBAction)cancelWasPressed:(id)sender {
     [self dismissSelf];
 }
 - (IBAction)doneWasPressed:(id)sender {
-    [self insertDiaryEntry];
+    if (self.entry!=nil){
+        [self updateDiaryEntry];
+    }
+    else {
+        [self insertDiaryEntry];
+    }
+    
       [self dismissSelf];
 }
 -(void)dismissSelf{
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+-(void)updateDiaryEntry{
+    
+    self.entry.body=self.textField.text;
+    
+    
+    AQCoreDataStack *coreDataStack=[AQCoreDataStack defaultStack];
+   [coreDataStack saveContext];
+    
+  
+    
 }
 -(void)insertDiaryEntry{
     AQCoreDataStack *coreDataStack=[AQCoreDataStack defaultStack];

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AQNewEntryViewController : UIViewController
+@class THDiaryEntry;
+@interface AQEntryViewController : UIViewController
+@property(nonatomic,strong)THDiaryEntry *entry;
 
 @end

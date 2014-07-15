@@ -9,6 +9,7 @@
 #import "AQEntryListViewController.h"
 #import "AQCoreDataStack.h"
 #import "THDiaryEntry.h"
+#import "AQEntryViewController.h"
 
 @interface AQEntryListViewController () <NSFetchedResultsControllerDelegate>
 @property (nonatomic,strong)NSFetchedResultsController *fetchedResultsController;
@@ -41,6 +42,15 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"edit"]){
+        UITableViewCell *cell=sender;
+        NSIndexPath *indexPath =[self.tableView indexPathForCell:cell];
+        UINavigationController *navigationController =segue.destinationViewController;
+        AQEntryViewController *entryViewController = (AQEntryViewController *)navigationController.topViewController;
+        entryViewController.entry =[self.fetchedResultsController objectAtIndexPath:indexPath];
+    }
 }
 
 #pragma mark - Table view data source
