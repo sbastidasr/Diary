@@ -23,6 +23,10 @@
 		EA490C7A196EE1A70019F403 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA490C78196EE1A70019F403 /* InfoPlist.strings */; };
 		EA490C7C196EE1A70019F403 /* DiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA490C7B196EE1A70019F403 /* DiaryTests.m */; };
 		EA490C87196EF6710019F403 /* AQCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = EA490C86196EF6710019F403 /* AQCoreDataStack.m */; };
+		EAE91A17197420AD00708F9B /* THDiaryEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE91A16197420AD00708F9B /* THDiaryEntry.m */; };
+		EAE91A191974237100708F9B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE91A181974237100708F9B /* MainStoryboard.storyboard */; };
+		EAE91A1C197424BB00708F9B /* AQNewEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE91A1B197424BB00708F9B /* AQNewEntryViewController.m */; };
+		EAE91A1F19742D8200708F9B /* AQEntryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE91A1E19742D8200708F9B /* AQEntryListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,13 @@
 		EA490C7B196EE1A70019F403 /* DiaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiaryTests.m; sourceTree = "<group>"; };
 		EA490C85196EF6710019F403 /* AQCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQCoreDataStack.h; sourceTree = "<group>"; };
 		EA490C86196EF6710019F403 /* AQCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQCoreDataStack.m; sourceTree = "<group>"; };
+		EAE91A15197420AD00708F9B /* THDiaryEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDiaryEntry.h; sourceTree = "<group>"; };
+		EAE91A16197420AD00708F9B /* THDiaryEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDiaryEntry.m; sourceTree = "<group>"; };
+		EAE91A181974237100708F9B /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		EAE91A1A197424BB00708F9B /* AQNewEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQNewEntryViewController.h; sourceTree = "<group>"; };
+		EAE91A1B197424BB00708F9B /* AQNewEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQNewEntryViewController.m; sourceTree = "<group>"; };
+		EAE91A1D19742D8200708F9B /* AQEntryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQEntryListViewController.h; sourceTree = "<group>"; };
+		EAE91A1E19742D8200708F9B /* AQEntryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQEntryListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +132,16 @@
 				EA490C61196EE1A70019F403 /* AQAppDelegate.h */,
 				EA490C62196EE1A70019F403 /* AQAppDelegate.m */,
 				EA490C85196EF6710019F403 /* AQCoreDataStack.h */,
+				EAE91A1D19742D8200708F9B /* AQEntryListViewController.h */,
+				EAE91A1E19742D8200708F9B /* AQEntryListViewController.m */,
 				EA490C86196EF6710019F403 /* AQCoreDataStack.m */,
 				EA490C67196EE1A70019F403 /* Images.xcassets */,
 				EA490C64196EE1A70019F403 /* Diary.xcdatamodeld */,
+				EAE91A15197420AD00708F9B /* THDiaryEntry.h */,
+				EAE91A181974237100708F9B /* MainStoryboard.storyboard */,
+				EAE91A1A197424BB00708F9B /* AQNewEntryViewController.h */,
+				EAE91A1B197424BB00708F9B /* AQNewEntryViewController.m */,
+				EAE91A16197420AD00708F9B /* THDiaryEntry.m */,
 				EA490C59196EE1A70019F403 /* Supporting Files */,
 			);
 			path = Diary;
@@ -234,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE91A191974237100708F9B /* MainStoryboard.storyboard in Resources */,
 				EA490C5D196EE1A70019F403 /* InfoPlist.strings in Resources */,
 				EA490C68196EE1A70019F403 /* Images.xcassets in Resources */,
 			);
@@ -254,10 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE91A1C197424BB00708F9B /* AQNewEntryViewController.m in Sources */,
 				EA490C66196EE1A70019F403 /* Diary.xcdatamodeld in Sources */,
 				EA490C63196EE1A70019F403 /* AQAppDelegate.m in Sources */,
 				EA490C5F196EE1A70019F403 /* main.m in Sources */,
 				EA490C87196EF6710019F403 /* AQCoreDataStack.m in Sources */,
+				EAE91A1F19742D8200708F9B /* AQEntryListViewController.m in Sources */,
+				EAE91A17197420AD00708F9B /* THDiaryEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +476,7 @@
 				EA490C81196EE1A70019F403 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA490C82196EE1A70019F403 /* Build configuration list for PBXNativeTarget "DiaryTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +485,7 @@
 				EA490C84196EE1A70019F403 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
